@@ -1,0 +1,7 @@
+{
+    "require": {
+        "laminas/laminas-mail": "^2.17",
+        "symfony/http-foundation": "^6.1",
+        "symfony/mime": "^6.1"
+    }
+}

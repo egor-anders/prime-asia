@@ -1,0 +1,172 @@
+.team {
+  padding: 100px 0;
+  background-color: #F3F7FD;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 60px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+
+    @media (max-width: $breakpoint-md) {
+      align-items: center;
+    }
+  }
+
+  &__left {
+    width: 860px;
+    margin-right: 80px;
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &__img {
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 140px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: left;
+
+    @media (max-width: $breakpoint-md) {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: wrap row;
+    row-gap: 65px;
+    column-gap: 100px;
+
+    @media (max-width: $breakpoint-md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 65px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 220px;
+
+    @media (max-width: $breakpoint-mobile) {
+      gap: 6px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 140px;
+    }
+  }
+
+  &__name {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 14px;
+    }
+  }
+
+  &__post {
+    margin: 0;
+    color: #666666;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+
+    @media (max-width: $breakpoint-mobile) {
+      line-height: 160%;
+    }
+  }
+
+  &__right {
+    width: 204px;
+
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 180%;
+    text-align: right;
+  }
+
+  &__key {
+    margin: 0;
+    margin-bottom: 8px;
+    padding-right: 42px;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 41px;
+    text-align: right;
+
+
+    & span {
+      font-size: 24px;
+    }
+  }
+
+  &__number {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+
+    &:not(:last-child)::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: url('/assets/img/dashed.svg');
+      content: '';
+    }
+
+    &::after {
+      position: absolute;
+      top: 16%;
+      right: 0;
+      width: 12px;
+      height: 12px;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='url(%23paint0_linear_1_425)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_1_425' x1='6' y1='0' x2='6' y2='12' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FFEDB4'/%3E%3Cstop offset='0.895833' stop-color='%23FFCE25'/%3E%3Cstop offset='1' stop-color='%23FFDC63'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+      content: '';
+    }
+  }
+
+  &__value {
+    margin: 0;
+    padding-right: 42px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: right;
+  }
+}

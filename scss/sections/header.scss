@@ -1,0 +1,269 @@
+.header {
+  &__contacts {
+    display: none;
+
+    @media (max-width: $breakpoint-mobile) {
+      display: flex;
+      order: 3;
+      justify-content: space-between;
+      box-sizing: border-box;
+      width: 100%;
+      margin-top: 20px;
+      padding-right: 3px;
+      padding-left: 6px;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__phone {
+    color: #333333;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  &__city {
+    margin: 0;
+    color: #333333;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &--padding {
+    padding-top: 70px;
+
+    @media (max-width: $breakpoint-mobile) {
+      padding-top: 64px;
+    }
+  }
+}
+
+.header__wrapper {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1679px;
+  margin: 0 auto;
+  padding-top: 8px;
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    z-index: 101;
+    background-color: #FFFFFF;
+  }
+
+  @media (max-width: $breakpoint-xl) {
+    width: 1157px;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    justify-content: center;
+    gap: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    justify-content: space-between;
+    gap: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 17px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+.header__logo {
+  @media (max-width: $breakpoint-mobile) {
+    width: 192px;
+    height: 34px;
+  }
+}
+
+.header__connection {
+  @media (max-width: $breakpoint-md) {
+    margin: 0;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    display: none;
+  }
+}
+
+
+.nav {
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0;
+    margin-right: 320px;
+    padding: 0;
+    list-style: none;
+
+    @media (max-width: $breakpoint-xl) {
+      margin-right: 25px;
+    }
+  }
+
+  &__item {
+    margin-right: 40px;
+
+    & a {
+      color: $color-main;
+      font-size: 14px;
+      line-height: 160%;
+      text-decoration: none;
+      transition: all 0.3s;
+
+      &:hover {
+        color: #FFCE25;
+      }
+    }
+  }
+}
+
+.header__address {
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
+}
+
+
+.menu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #FFFFFF;
+
+  &--show {
+    display: flex;
+  }
+
+  &__nav {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    display: none;
+  }
+
+  &__link {
+    color: #333333;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 160%;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #FFCE25;
+    }
+  }
+
+  &__item {
+    margin-bottom: 24px;
+    text-align: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #EDEEF1;
+  }
+
+  &__btn {
+    width: 32px;
+    height: 32px;
+    background: url('/assets/img/menu-open.svg');
+    cursor: pointer;
+
+    &--close {
+      background: url('/assets/img/menu-close.svg');
+    }
+
+    @media (min-width: $breakpoint-md) {
+      display: none;
+    }
+  }
+
+  &__address {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+
+    &::before {
+      left: -10px;
+    }
+  }
+
+  &__phone {
+    display: none;
+    color: #333333;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-decoration: none;
+
+    @media (max-width: $breakpoint-mobile) {
+      display: block;
+    }
+  }
+
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+    width: 100%;
+    height: 101%;
+    background: rgb(0 0 0 / 80%);
+
+
+    &--show {
+      display: block;
+    }
+  }
+}
+
+.header__social {
+  @media (max-width: $breakpoint-mobile) {
+    position: relative;
+    order: 3;
+  }
+}

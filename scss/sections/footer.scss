@@ -1,0 +1,198 @@
+.footer {
+  display: block;
+  padding: 34px 0 50px;
+  border-top: 1px solid #AAAAAA;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 30px 0;
+  }
+
+  &__requisites {
+    color: #333333;
+    text-decoration: none;
+  }
+
+  &__wrapper {
+    width: 1679px;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint-xl) {
+      width: 1157px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0 20px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: normal;
+
+    @media (max-width: $breakpoint-md) {
+      align-items: center;
+      gap: 15px;
+      width: 560px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      width: 100%;
+    }
+  }
+
+  &__logo {
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    @media (max-width: $breakpoint-md) {
+      padding-top: 20px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      padding-top: 0;
+    }
+  }
+
+  &__name {
+    margin: 0;
+    font-size: 14px;
+    line-height: 160%;
+
+    &--1 {
+      font-weight: 700;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-right: 0;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 166px;
+    height: 56px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    text-align: center;
+    border: 1px solid #333333;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+
+  &__address {
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  &__bottom {
+    justify-content: end;
+
+    @media (max-width: $breakpoint-md) {
+      width: 560px;
+      margin: 0 auto;
+      margin-top: 15px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-top: 40px;
+    }
+  }
+
+  &__descr {
+    /* or 19px */
+    color: #AAAAAA;
+    font-size: 12px;
+    line-height: 160%;
+
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  &__extra {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+
+    @media (max-width: $breakpoint-md) {
+      align-items: center;
+      padding-top: 0;
+    }
+  }
+
+  &__politics {
+    color: #2B97EC;
+    font-size: 14px;
+    line-height: 160%;
+    text-decoration-line: underline;
+    text-align: right;
+  }
+
+  &__copyright {
+    font-size: 14px;
+    line-height: 160%;
+    text-align: right;
+  }
+
+  &__connection {
+    order: 1;
+
+    @media (max-width: $breakpoint-md) {
+      margin: 0 auto;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  &__social {
+    margin-top: 16px;
+
+    @media (max-width: $breakpoint-md) {
+      margin: 0 29px;
+    }
+
+
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+}
+

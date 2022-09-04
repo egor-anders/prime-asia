@@ -1,0 +1,185 @@
+.payment {
+  padding: 100px 0;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 60px 0;
+  }
+
+  &__cards {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    margin-top: 118px;
+
+
+    @media (max-width: $breakpoint-md) {
+      justify-content: center;
+      row-gap: 90px;
+      column-gap: 30px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      row-gap: 50px;
+      margin-top: 67px;
+    }
+  }
+
+  &__card {
+    position: relative;
+    box-sizing: border-box;
+    width: 366px;
+    padding: 46px;
+    padding-top: 60px;
+    background: #F3F7FD;
+    border-radius: 20px;
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: 42px 20px 20px;
+    }
+
+    &::before{
+      position: absolute;
+      top: -25px;
+      left: 36%;
+      width: 48px;
+      height: 48px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: translateX(-50%);
+      content: '';
+    }
+
+    &::after{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      content: '';
+    }
+
+    &--01 {
+      &::before {
+        background-image: url('/assets/img/n-01.svg');
+      }
+
+      &::after {
+        top: -32px;
+        left: 145px;
+        width: 87px;
+        height: 80px;
+        background-image: url('/assets/img/payment-1.png');
+        background-size: cover;
+
+        @media (max-width: $breakpoint-mobile) {
+          top: -40px;
+          left: 41%;
+          width: 74px;
+          height: 68px;
+        }
+      }
+    }
+
+    &--02 {
+      &::before {
+        background-image: url('/assets/img/n-02.svg');
+      }
+
+      &::after {
+        top: -47px;
+        left: 140px;
+        width: 125px;
+        height: 90px;
+        background-image: url('/assets/img/payment-2.png');
+        background-size: cover;
+
+        @media (max-width: $breakpoint-mobile) {
+          top: -42px;
+          left: 39%;
+          width: 95px;
+          height: 69px;
+        }
+      }
+    }
+
+    &--03 {
+      &::before {
+        background-image: url('/assets/img/n-03.svg');
+      }
+
+      &::after {
+        top: -40px;
+        left: 110px;
+        width: 130px;
+        height: 83px;
+        background-image: url('/assets/img/payment-3.png');
+        background-size: cover;
+
+        @media (max-width: $breakpoint-mobile) {
+          top: -36px;
+          left: 34%;
+          width: 98px;
+          height: 62px;
+        }
+      }
+    }
+  }
+
+  &__name {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 160%;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 14px;
+      font-size: 18px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 90px;
+    font-size: 14px;
+    line-height: 160%;
+    text-align: left;
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__extra {
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  &__info {
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+
+    & sup {
+      margin-right: 6px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-top: 27px;
+    }
+  }
+}

@@ -1,0 +1,176 @@
+@import 'vendor/normalize.scss';
+@import 'vendor/slick.scss';
+@import 'vendor/slick-theme.scss';
+@import 'variables.scss';
+@import 'sections/items.scss';
+@import 'sections/header.scss';
+@import 'sections/hero.scss';
+@import 'sections/facts.scss';
+@import 'sections/steps.scss';
+@import 'sections/price.scss';
+@import 'sections/attention.scss';
+@import 'sections/payment.scss';
+@import 'sections/calculator.scss';
+@import 'sections/expenses.scss';
+@import 'sections/team.scss';
+@import 'sections/storage.scss';
+@import 'sections/contacts.scss';
+@import 'sections/footer.scss';
+@import 'sections/popup.scss';
+@import 'sections/cases.scss';
+@import 'sections/about.scss';
+@import 'sections/poll.scss';
+@import 'sections/quiz.scss';
+
+
+@font-face {
+  font-weight: 400;
+  font-family: 'Golos';
+  src: url('../../assets/fonts/Golos-Text_Regular.ttf');
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: 'Golos';
+  src: url('../../assets/fonts/Golos-Text_Medium.ttf');
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: 'Golos';
+  src: url('../../assets/fonts/Golos-Text_DemiBold.ttf');
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: 'Golos';
+  src: url('../../assets/fonts/Golos-Text_Bold.ttf');
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: 'Montserrat';
+  src: url('../../assets/fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+
+html {
+  overflow-x: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: $color-main;
+  font-family: 'Golos', 'Courier', monospace;
+}
+
+.container {
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @media (min-width: 1200px) {
+    width: 1157px;
+    padding: 0;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+h1 {
+  margin-top: 20vh;
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+
+.logo {
+  width: 220px;
+  height: 40px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: $breakpoint-xl) {
+    width: 180px;
+    height: 40px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 192px;
+    height: 34px;
+  }
+}
+
+
+.strong {
+  color: #6383BE;
+}
+
+.bg-1 {
+  background-image: url('/assets/img/hero-bg-2.png');
+  background-repeat: no-repeat;
+  background-position-x: 0;
+  background-position-y: -7px;
+  background-size: 100% 790px;
+
+  @media (max-width: $breakpoint-md) {
+    background-repeat: no-repeat;
+    background-position-x: 110%;
+    background-position-y: 0;
+    background-size: 102% 510px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    background-image: url('/assets/img/hero-mob.png');
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    background-position-y: 47px;
+    background-size: 100% 265px;
+  }
+}
+
+.bg-2 {
+  position: relative;
+  background: url('/assets/img/bg-2.png');
+  background-repeat: no-repeat;
+  background-position-y: -170px;
+  background-size: cover;
+
+  @media (max-width: $breakpoint-md) {
+    background: none;
+  }
+}
+
+.blur-block {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  backdrop-filter: blur(3000px);
+  opacity: 0.2;
+}
+
+button {
+  border: none;
+  outline: none;
+}

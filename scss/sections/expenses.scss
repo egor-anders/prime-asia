@@ -1,0 +1,242 @@
+.expenses {
+  position: relative;
+  margin-top: 100px;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-top: 60px;
+  }
+
+  &__example {
+    position: relative;
+    display: block;
+    margin-top: 20px;
+    color: #6383BE;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 180%;
+
+    &::before {
+      position: absolute;
+      bottom: -39px;
+      left: 250px;
+      width: 50px;
+      height: 50px;
+      background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M43.8997 49.1345C43.5493 49.3554 43.0862 49.2505 42.8653 48.9001L39.2655 43.19C39.0446 42.8396 39.1496 42.3765 39.5 42.1556C39.8504 41.9347 40.3135 42.0397 40.5344 42.3901L43.7342 47.4657L48.8098 44.2659C49.1602 44.045 49.6233 44.15 49.8442 44.5004C50.0651 44.8508 49.9601 45.3139 49.6097 45.5348L43.8997 49.1345ZM0.000223569 0.750169C9.09431 0.750169 22.2697 3.14357 32.1293 10.3316C37.0721 13.935 41.1911 18.7516 43.5239 25.0765C45.8564 31.4009 46.3821 39.1769 44.2311 48.6659L42.7683 48.3343C44.8675 39.0733 44.3308 31.5993 42.1165 25.5956C39.9025 19.5923 35.9903 15.0027 31.2457 11.5437C21.7304 4.60672 8.90591 2.25017 0.000223851 2.25017L0.000223569 0.750169Z' fill='%236383BE'/%3E%3C/svg%3E%0A");
+      content: '';
+
+      @media (max-width: $breakpoint-mobile) {
+        bottom: -19px;
+        left: 260px;
+        width: 15px;
+        height: 30px;
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='30' viewBox='0 0 15 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.54285 29.2491C7.12935 29.2734 6.77442 28.9579 6.7501 28.5444L6.35367 21.8061C6.32935 21.3926 6.64483 21.0377 7.05833 21.0133C7.47183 20.989 7.82676 21.3045 7.85109 21.718L8.20346 27.7076L14.1931 27.3553C14.6066 27.3309 14.9615 27.6464 14.9859 28.0599C15.0102 28.4734 14.6947 28.8283 14.2812 28.8527L7.54285 29.2491ZM0.577536 0.754793C5.42661 1.26505 8.90542 2.67821 11.2304 4.73548C13.5686 6.80446 14.6729 9.4662 14.8722 12.3229C15.2665 17.9754 12.1323 24.4165 8.05936 28.9987L6.93824 28.0021C10.8655 23.5839 13.7314 17.5247 13.3758 12.4273C13.2001 9.9091 12.2419 7.63345 10.2364 5.85885C8.21766 4.07255 5.07148 2.73596 0.42056 2.24656L0.577536 0.754793Z' fill='%236383BE'/%3E%3C/svg%3E ");
+      }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      padding-left: 16px;
+    }
+  }
+
+
+  &__zoom {
+    &-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9005;
+      display: none;
+      width: 100%;
+      height: 100%;
+      background: rgb(0 0 0 / 20%);
+
+
+      &--show {
+        display: block;
+      }
+    }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 9998;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 1000px;
+    height: 460px;
+    padding: 30px;
+    background: #FFFFFF;
+    border-radius: 18px;
+    transform: translate(-50%, -50%);
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+      height: 510px;
+    }
+  }
+
+
+  &__slider {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__close {
+    position: absolute;
+    top: 43px;
+    right: 49px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+    @media (max-width: $breakpoint-md) {
+      top: 16px;
+      right: 18px;
+    }
+  }
+
+  &__arrows {
+    position: relative;
+    z-index: 9999;
+    display: flex;
+    gap: 15px;
+    margin: 0 auto;
+  }
+
+  &__slide {
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    h3 {
+      display: block;
+      margin: 0;
+      font-weight: 600;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    span {
+      display: block;
+      margin: 0;
+      font-weight: 400;
+      font-size: 11px;
+      text-align: center;
+    }
+  }
+
+  &__pic {
+    width: auto;
+    height: 340px;
+
+
+    @media (max-width: $breakpoint-md) {
+      width: auto;
+      height: 320px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      @media (max-width: $breakpoint-md) {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__popup {
+    position: absolute;
+    top: 0;
+    left: 7.3%;
+    z-index: 2;
+    width: 82.4%;
+    height: 99.1%;
+    background: rgb(18 18 18 / 50%);
+    border-radius: 30px 30px 0 0;
+    cursor: pointer;
+
+    @media (max-width: $breakpoint-mobile) {
+      border-radius: 16px 16px 0 0;
+    }
+
+    &::before {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      z-index: 3;
+      width: 48px;
+      height: 48px;
+      background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 38C30.8366 38 38 30.8366 38 22C38 13.1634 30.8366 6 22 6C13.1634 6 6 13.1634 6 22C6 30.8366 13.1634 38 22 38Z' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M42 42L33.3 33.3' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M22 16V28' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 22H28' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
+      transform: translate(-50%, -50%);
+      content: '';
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    max-width: 625px;
+    margin: 30px auto;
+    margin-bottom: 50px;
+
+    @media (max-width: $breakpoint-mobile) {
+      display: flex;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__img {
+    width: 80px;
+    height: 108px;
+    margin-right: 24px;
+
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 180%;
+  }
+
+  &__photo {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+
+.slick-initialized .slick-slide {
+  display: flex;
+}
